@@ -510,3 +510,5 @@ Built with ❤️ for accessible justice in India
 [🐛 Report Bug](https://github.com/praveen-grande/law-bot-ai/issues) · [💡 Request Feature](https://github.com/praveen-grande/law-bot-ai/issues) · [⭐ Star this repo](https://github.com/praveen-grande/law-bot-ai)
 
 </div>
+#   l a w - b o t - a i  
+ 
