@@ -1,0 +1,6 @@
+{
+  "name": "Law Bot AI",
+  "description": "AI-powered legal research and information platform for Indian laws, statutes, case judgments, and document analysis with evidence-grounded answers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

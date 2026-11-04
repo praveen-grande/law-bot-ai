@@ -1,0 +1,284 @@
+{
+  "entities": {
+    "UserProfilePublic": {
+      "title": "UserProfilePublic",
+      "description": "Public profile settings for a legal researcher or citizen",
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "role": {
+          "type": "string",
+          "enum": ["user", "admin", "superadmin"]
+        },
+        "preferredLanguage": {
+          "type": "string",
+          "enum": ["en", "hi", "te"]
+        },
+        "jurisdictionPreference": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["ownerId", "name", "role", "preferredLanguage", "createdAt"]
+    },
+    "UserPrivateInfo": {
+      "title": "UserPrivateInfo",
+      "description": "Isolated PII document for user email and auth provider",
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 200
+        },
+        "authProvider": {
+          "type": "string",
+          "enum": ["google", "password"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["ownerId", "email", "authProvider", "createdAt"]
+    },
+    "Conversation": {
+      "title": "Conversation",
+      "description": "A legal research chat conversation thread",
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 250
+        },
+        "topic": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["ownerId", "title", "topic", "createdAt", "updatedAt"]
+    },
+    "ChatMessageDoc": {
+      "title": "ChatMessageDoc",
+      "description": "Individual message inside a conversation subcollection",
+      "type": "object",
+      "properties": {
+        "conversationId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["user", "assistant"]
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 15000
+        },
+        "thinking": {
+          "type": "string",
+          "maxLength": 5000
+        },
+        "modelUsed": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "language": {
+          "type": "string",
+          "enum": ["en", "hi", "te"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["conversationId", "ownerId", "role", "content", "language", "createdAt"]
+    },
+    "StatutorySectionDoc": {
+      "title": "StatutorySectionDoc",
+      "description": "Official Indian statutory section record",
+      "type": "object",
+      "properties": {
+        "actName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "sectionNumber": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "statutoryText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 10000
+        },
+        "simpleExplanation": {
+          "type": "string",
+          "maxLength": 10000
+        },
+        "status": {
+          "type": "string",
+          "enum": ["In Force", "Amended", "Repealed"]
+        },
+        "jurisdiction": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "officialSourceUrl": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "createdBy": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["actName", "sectionNumber", "title", "statutoryText", "status", "jurisdiction", "createdBy", "createdAt"]
+    },
+    "FeedbackReportDoc": {
+      "title": "FeedbackReportDoc",
+      "description": "User submitted citation audit or feedback report",
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["Incorrect Citation", "Outdated Section", "Extraction Issue", "General Feedback"]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Open", "In Review", "Resolved"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["ownerId", "type", "description", "status", "createdAt", "updatedAt"]
+    },
+    "AdminRecordDoc": {
+      "title": "AdminRecordDoc",
+      "description": "Trusted admin role registry entry",
+      "type": "object",
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": ["admin", "superadmin"]
+        },
+        "department": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 150
+        },
+        "createdBy": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["role", "department", "createdBy", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfilePublic" },
+      "description": "Public profile preferences for each user"
+    },
+    "/users/{userId}/private/{infoId}": {
+      "schema": { "$ref": "#/entities/UserPrivateInfo" },
+      "description": "Isolated PII storage for user email and auth provider"
+    },
+    "/conversations/{conversationId}": {
+      "schema": { "$ref": "#/entities/Conversation" },
+      "description": "User legal chat conversations"
+    },
+    "/conversations/{conversationId}/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/ChatMessageDoc" },
+      "description": "Messages belonging to a specific conversation"
+    },
+    "/statutory_sections/{sectionId}": {
+      "schema": { "$ref": "#/entities/StatutorySectionDoc" },
+      "description": "Official statutory provisions indexed in Firestore"
+    },
+    "/feedback_reports/{reportId}": {
+      "schema": { "$ref": "#/entities/FeedbackReportDoc" },
+      "description": "Citation feedback and issue reports"
+    },
+    "/admins/{adminUid}": {
+      "schema": { "$ref": "#/entities/AdminRecordDoc" },
+      "description": "Trusted admin privileges collection"
+    }
+  }
+}

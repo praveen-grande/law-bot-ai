@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "sessionSecret": "cf940659bb73c4a548ccabdf799f72685e1323379341c9e29b885e21c81834fe",
+  "lastUpdatedAt": "2026-11-03T15:47:57.741Z",
+  "users": [
+    {
+      "id": "admin-super-root",
+      "email": "superadmin@lawbot.ai",
+      "name": "Chief Legal Registrar (Super Admin)",
+      "passwordHash": "scrypt$16d21146201c291db155c4bcb87d7bc3$4dff81aaa75db0ecf8c9cfeddb4500d25e34d7a1cd8ecc07a97c96231b1cf39d701406ea00e7ee47ede97a7f660faa9e7e2cb810a0b2ecb1d1349daf1767b579",
+      "role": "SUPER_ADMIN",
+      "status": "ACTIVE",
+      "department": "High Court & Union Law Oversight",
+      "createdBy": "System Root",
+      "createdAt": "2026-11-02T07:02:04.834Z",
+      "updatedAt": "2026-11-02T07:03:05.187Z",
+      "lastLoginAt": "2026-11-02T07:03:05.187Z",
+      "authProvider": "password"
+    },
+    {
+      "id": "admin-patel-ops",
+      "email": "sneha@univ.edu",
+      "name": "Adv. Sneha Patel",
+      "passwordHash": "scrypt$44db0bc925864ca0eb4c43fe325bac2a$0f2e28ca2aa893b1af551bebbbc7cc9d16f0330ebb3734b9b1cf8b399bb339555946a5bf96aa93767e9219cafb9aac9027e39dfc97d3a81fd53a416741ba5dbf",
+      "role": "ADMIN",
+      "status": "ACTIVE",
+      "department": "Citation Audit & Gazette Ingestion",
+      "createdBy": "superadmin@lawbot.ai",
+      "createdAt": "2026-11-02T07:02:04.834Z",
+      "updatedAt": "2026-11-02T07:03:00.503Z",
+      "lastLoginAt": "2026-11-02T07:03:00.503Z",
+      "authProvider": "password"
+    },
+    {
+      "id": "admin-sharma-ops",
+      "email": "admin.sharma@lawbot.ai",
+      "name": "Operations Admin Sharma",
+      "passwordHash": "scrypt$73d14b884c68095f124caf35f92a6509$fb0d690dca686386b091fe0ee161707a22d9999df15f07886210e0afd488ffca8c29345ec15d27a1f302e25d8eef037425cc6ebe4b10d85197010c07ee2f4354",
+      "role": "ADMIN",
+      "status": "ACTIVE",
+      "department": "Statutory Registry & Sync",
+      "createdBy": "superadmin@lawbot.ai",
+      "createdAt": "2026-11-02T07:02:04.834Z",
+      "updatedAt": "2026-11-02T07:02:04.834Z",
+      "authProvider": "password"
+    },
+    {
+      "id": "usr-citizen-deepak",
+      "email": "kondetisrideepakrayal3006@gmail.com",
+      "name": "Deepak Rayal",
+      "passwordHash": "scrypt$5af381625acca4be52f2ee61959b553f$598b303f22d3d9778cca0b261bf476c1251600e3f8ffc85ab0483517f686ce31b2a6f759dd68607472531bb0453287eac13e8bc27deee5eaa54c8ee98d4c6557",
+      "role": "USER",
+      "status": "ACTIVE",
+      "createdBy": "self-signup",
+      "createdAt": "2026-11-02T07:02:04.834Z",
+      "updatedAt": "2026-11-02T07:02:04.834Z",
+      "authProvider": "password"
+    },
+    {
+      "id": "usr_bcd75bb86aa31dca",
+      "email": "verify.user.1793602974663@example.com",
+      "name": "Priya Sharma",
+      "passwordHash": "scrypt$271d41044ff9c81b7798c93c8caedd2d$c9c440306ed37b0c2ad679e6c1d56056795bc54ac81800914088fcf16a024075128e78118f9826f076c4679367dba5134d695fa89a030d92cc430db111f061c2",
+      "role": "USER",
+      "status": "ACTIVE",
+      "createdBy": "public-signup",
+      "createdAt": "2026-11-02T07:02:54.775Z",
+      "updatedAt": "2026-11-02T07:02:54.775Z",
+      "lastLoginAt": "2026-11-02T07:02:54.775Z",
+      "authProvider": "password"
+    }
+  ],
+  "sessions": [
+    {
+      "sessionId": "sess_26abb0308055516e9da67b6749fb9d22",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-02T07:02:09.037Z",
+      "expiresAt": "2026-11-09T07:02:09.037Z",
+      "lastActiveAt": "2026-11-02T07:02:09.037Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_4121a609c8a5834494cbe459aa25abbe",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-02T07:02:25.503Z",
+      "expiresAt": "2026-11-09T07:02:25.503Z",
+      "lastActiveAt": "2026-11-02T07:02:25.503Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_f506eea4cfbd273f7451dd5da9820c4a",
+      "userId": "admin-super-root",
+      "createdAt": "2026-11-02T07:03:05.188Z",
+      "expiresAt": "2026-11-09T07:03:05.188Z",
+      "lastActiveAt": "2026-11-02T07:03:05.188Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_6876a16e5a20890caf0ae1dee083dd81",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-02T07:12:25.345Z",
+      "expiresAt": "2026-11-09T07:12:25.345Z",
+      "lastActiveAt": "2026-11-02T07:12:25.345Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_056442eeefa866de31b7cbc7e3e78d98",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-03T14:47:54.578Z",
+      "expiresAt": "2026-11-10T14:47:54.578Z",
+      "lastActiveAt": "2026-11-03T14:47:54.578Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_d3ad32fdee54f86e23d32bfa2cd08ecd",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-03T14:55:53.015Z",
+      "expiresAt": "2026-11-10T14:55:53.015Z",
+      "lastActiveAt": "2026-11-03T14:55:53.015Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_7f4328840729654bdd4fc738164872e5",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-03T15:02:40.076Z",
+      "expiresAt": "2026-11-10T15:02:40.076Z",
+      "lastActiveAt": "2026-11-03T15:02:40.076Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_62822257307158e80cfa5f0e6faab8cd",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-03T15:21:59.466Z",
+      "expiresAt": "2026-11-10T15:21:59.466Z",
+      "lastActiveAt": "2026-11-03T15:21:59.466Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_4bf24dbc47fca3a3df05d558324ae464",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-03T15:25:06.435Z",
+      "expiresAt": "2026-11-10T15:25:06.435Z",
+      "lastActiveAt": "2026-11-03T15:25:06.435Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_06770853ef12ba7ac5e7200d48cfa504",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-03T15:36:53.646Z",
+      "expiresAt": "2026-11-10T15:36:53.646Z",
+      "lastActiveAt": "2026-11-03T15:36:53.646Z",
+      "revoked": false
+    },
+    {
+      "sessionId": "sess_0743283d6ab52645f96ed35ad1577775",
+      "userId": "usr-citizen-deepak",
+      "createdAt": "2026-11-03T15:47:57.741Z",
+      "expiresAt": "2026-11-10T15:47:57.741Z",
+      "lastActiveAt": "2026-11-03T15:47:57.741Z",
+      "revoked": false
+    }
+  ]
+}
